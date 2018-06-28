@@ -42,7 +42,7 @@ const dbOperations= {
                     //     alert("yippee");
                     // }
                     var objI =obj[key];
-                    if(userid == objI.userid && pwd== objI.pwd){
+                    if(userid == objI.userid && pwd== objI.password){
                         alert("yippee");
                         resolve(objI);
                     }
@@ -53,5 +53,9 @@ const dbOperations= {
             });
         });
         return pr;
+    },
+    addUser(userObject){
+        firebase.database().ref('users/'+userObject.id).set(userObject);
+        console.log("User Added...");
     }
 }
