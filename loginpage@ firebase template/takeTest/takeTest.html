@@ -1,10 +1,12 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Take Test</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
     <script src="js/custom/utils/util.js"></script>
     <script src="js/custom/models/question.js"></script>
@@ -13,11 +15,51 @@
     <script src="js/custom/utils/db.js"></script>
     <script src="js/custom/controllers/testcontroller.js"></script>
 </head>
+
 <body>
 
     <div class="container">
         <br>
         <button id="getQ" class="btn btn-primary">Start test</button>
+        <div id="testdiv" class="">
+            <!-- <p id="question"></p>
+            himank -->
+            <p>Time Left
+                <span id="time"></span>
+            </p>
+            <div id="status">
+
+            </div>
+            <hr>
+            <fieldset>
+                <legend>Test</legend>
+                <p id="question"></p>
+                <input type="radio" name="ans" value="A" checked>
+                <span id="opA"></span>
+                <br>
+                <input type="radio" name="ans" value="B" >
+                <span id="opB"></span>
+                <br>
+                <input type="radio" name="ans" value="C" >
+                <span id="opC"></span>
+                <br>
+                <input type="radio" name="ans" value="D">
+                <span id="opD"></span>
+                <br>
+                <br>
+                <button id="prev" class="btn btn-primary">Prev</button>
+                <button id="submit" class="btn btn-success">Submit</button>
+                <button id="next" class="btn btn-primary">Next</button>
+                
+                <br>
+                <br>
+                <button id="end" class="btn btn-danger">End Test</button>
+            </fieldset>
+            <h2 class="center">
+                    <span id="total"></span>
+                </h2>
+        </div>
     </div>
 </body>
+
 </html>
