@@ -24,10 +24,9 @@ function redirect(){
 };
 
 function takeTest(){
-    // location.href = "";
-    location.href = "../../../takeTest/takeTest.html"
+    location.href="takeTest/takeTest.html"
 }
 
 function createTest(){
-    location.href = "../../../createTest/question.html"
+    location.href = "createTest/question.html"
 }
