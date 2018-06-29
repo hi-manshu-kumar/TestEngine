@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Create test</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/design.css">
     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
     <script src="js/custom/Utils/util.js"></script>
     <script src="js/custom/Models/question.js"></script>
@@ -13,13 +14,13 @@
     <script src="js/custom/Controller/questionController.js"></script>
 </head>
 <body>
-    
+        <div class="container tile center">
         <fieldset>
             <legend>
                 Create Test here
             </legend>
             <label for="">Type Question here</label> <br>
-            <textarea name="question" id="question" cols="30" rows="10"></textarea> <br> <br>
+            <textarea name="question" id="question" cols="30" rows="10" placeholder="Question here"></textarea> <br> <br>
             
             <label for="">Enter Option A : </label>
             <input id="optionA" type="text" placeholder="Answer A"> <br>
@@ -32,10 +33,10 @@
 
             <label for="">Enter Correct Option A/B/C/D : </label>
             <input id="rans" type="text" placeholder="Answer"> <br>
-
+            <br>
             <button id="add" class="btn btn-primary">Add question</button>
             
         </fieldset>
-    
+    </div>
 </body>
 </html>

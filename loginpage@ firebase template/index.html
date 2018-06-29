@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/custom/design.css">
+    <link rel="stylesheet" media="screen" href="css/custom/design.css">
     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
     <script src="js/custom/utils/util.js"></script>
     <script src="js/custom/config.js"></script>
@@ -15,61 +15,66 @@
     <script src="js/custom/utils/db.js"></script>
     <script src="js/custom/controllers/usercontroller.js"></script>
 </head>
+
 <body>
-    <div class="container">
-        <br>
-        <a id="login" class="btn btn-primary">Login</a>
-        <a id="register" class="btn btn-success" >Register</a>
-<!-- login div -->
-        <div id="loginDiv" class="well">
-            <h1>Login Form</h1>
-            <h2 id="message"></h2>
-            <div class="form-group">
-                <label for="">Userid</label>
-                <input type="text" class="form-control" placeholder="Type Userid Here" id="useridtxt">
+       
+        <div class="container tile center ">
+            <br>
+            <a id="login" class="btn btn-primary">Login</a>
+            <a id="register" class="btn btn-success">Register</a>
+            <!-- login div -->
+            <div id="loginDiv" class="well">
+                <h1>Login Form</h1>
+                <h2 id="message"></h2>
+                <div class="form-group">
+                    <label for="">Userid</label>
+                    <input type="text" class="form-control" placeholder="Type Userid Here" id="useridtxt">
+                </div>
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" class="form-control" placeholder="Type Password Here" id="passwordtxt">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" id="loginBt">Login</button>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="">Password</label>
-                <input type="password" class="form-control" placeholder="Type Password Here" id="passwordtxt">
+            <!-- register Div -->
+            <div id="regDiv" class="well">
+                <h1>Register form</h1>
+                <div class="form-group">
+                    <label for="">Userid</label>
+                    <input type="text" placeholder="Enter userid here" class="form-control" id="userid">
+                </div>
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="text" placeholder="Enter Password here" class="form-control" id="password">
+                </div>
+                <div class="form-group">
+                    <label for="">Name</label>
+                    <input type="text" placeholder="Enter name here" class="form-control" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="">Type</label>
+                    <select name="Type" class="form-control" id="type">
+                        <option value="Student">Student</option>
+                        <option value="Teacher">Teacher</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="">Age</label>
+                    <input type="number" placeholder="Enter age here" class="form-control" id="age">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" id="regBt">
+                        Register
+                    </button>
+                </div>
             </div>
-            <div class="form-group">
-                <button class="btn btn-primary" id="loginBt">Login</button>
-            </div>
+
         </div>
-<!-- register Div -->
-        <div id="regDiv" class="well">
-            <h1>Register form</h1>
-            <div class="form-group">
-                <label for="">Userid</label>
-                <input type="text" placeholder="Enter userid here" class="form-control" id="userid">
-            </div>
-            <div class="form-group">
-                <label for="">Password</label>
-                <input type="text" placeholder="Enter Password here" class="form-control" id="password">
-            </div>
-            <div class="form-group">
-                <label for="">Name</label>
-                <input type="text" placeholder="Enter name here" class="form-control" id="name">
-            </div>
-            <div class="form-group">
-                <label for="">Type</label>
-                <select name="Type" class="form-control" id="type">
-                    <option value="Student">Student</option>
-                    <option value="Teacher">Teacher</option>
-                  </select>           
-            </div>
-            <div class="form-group">
-                <label for="">Age</label>
-                <input type="number" placeholder="Enter age here" class="form-control" id="age">
-            </div>
-            <div class="form-group">
-                <button class="btn btn-primary" id="regBt">
-                    Register
-                </button>
-            </div>
-        </div>
-        
-    </div>
+    
+
+    
 </body>
 
 </html>

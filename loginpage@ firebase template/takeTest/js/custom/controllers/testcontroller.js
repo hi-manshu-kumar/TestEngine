@@ -15,7 +15,8 @@ function init() {
 }
 
 function recieveQues() {
-    document.querySelector("#getQ").setAttribute("disabled", true)
+    document.querySelector("#getQ").setAttribute("disabled", true);
+    document.querySelector("#getQ").className = "btn btn-secondary";
     var pr = dbOperations.getQuestionList();
     pr.then(data => {
         // questionOperations.prepareQuestions(data.id, data.name, data.ans, data.opA, data.opB, data.opC, data.opD);
@@ -32,6 +33,7 @@ function init2() {
     questions = questionOperations.questions;
     // questions = questionOperations.prepareQuestions();
     printQuestion();
+    document.querySelector("#testDiv").className = "show";
     disable();
     printStatus();
     timer();
@@ -50,6 +52,7 @@ function timer() {
     // }).catch(err => {
     //     console.log("error in timer promise");
     // });
+
     var min = 2;
     var sec = 10;
     var x = setInterval(function () {
@@ -105,16 +108,23 @@ function disable() {
     if (index == 0) {
         // console.log("index and length is ",index,questions.length - 1);
         document.querySelector("#prev").setAttribute("disabled", true);
+        document.querySelector("#prev").className ="btn btn-secondary";
     } else {
         // console.log("index and length is ",index,questions.length - 1);
         document.querySelector("#prev").removeAttribute("disabled");
+        document.querySelector("#prev").className ="btn btn-primary";
+
     }
     if (index >= questions.length - 1) {
         document.querySelector("#next").setAttribute("disabled", true);
         console.log("index and length is ", index, questions.length - 1);
+        document.querySelector("#next").className ="btn btn-secondary";
+
 
     } else {
         document.querySelector("#next").removeAttribute("disabled");
+        document.querySelector("#next").className ="btn btn-primary";
+
     }
 }
 
@@ -201,7 +211,10 @@ function submitAns() {
 
 function disableAll() {
     document.querySelector("#prev").setAttribute("disabled", true);
+    document.querySelector("#prev").className ="btn btn-secondary";
     document.querySelector("#next").setAttribute("disabled", true);
+    document.querySelector("#next").className ="btn btn-secondary";
     document.querySelector("#submit").setAttribute("disabled", true);
+    document.querySelector("#submit").className ="btn btn-secondary";
 
 }
