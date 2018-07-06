@@ -11,9 +11,12 @@ function init() {
     // document.querySelector("#search").addEventListener("click", search);
     // document.querySelector("#login").addEventListener("click", login);
     document.querySelector("#getQ").addEventListener("click", recieveQues);
+    document.querySelector("#goBack").addEventListener("click", goBackQ);
 
 }
-
+function goBackQ(){
+    location.href = "../welcome.html";
+}
 function recieveQues() {
     document.querySelector("#getQ").setAttribute("disabled", true);
     document.querySelector("#getQ").className = "btn btn-secondary";
@@ -199,7 +202,7 @@ function submitAns() {
             option_value = option[a].value;
         }
     }
-
+    // console.log({option_value},{rans});
     if (option_value == rans) {
         marks += 10;
     }

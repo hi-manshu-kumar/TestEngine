@@ -5,7 +5,12 @@ var sequence;
 function init(){
     document.querySelector("#add").addEventListener("click",addQuestion);
     sequence = autoGen();
+    document.querySelector("#goBack").addEventListener("click", goBackQ);
+    
     // document.querySelector("#search").addEventListener("click",search);
+}
+function goBackQ(){
+    location.href = "../welcome.html";
 }
 
 function addQuestion(){
@@ -20,7 +25,7 @@ function addQuestion(){
    // var questionObject = new Question(1,question, ans);
    console.log("data added");
     dbOperations.addQuestion(questionObject);
-    
+    alert("Question added");
 }
 
 function search(){

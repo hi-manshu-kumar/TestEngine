@@ -59,6 +59,7 @@ function doReg(){
    // var questionObject = new Question(1,question, ans);
    console.log("data added");
     dbOperations.addUser(userObject);
+alert("You have been Registered");
 }
 
 function show(){

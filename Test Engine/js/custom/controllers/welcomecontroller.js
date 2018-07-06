@@ -14,7 +14,13 @@ function init(){
     }
     document.querySelector("#takeT").addEventListener("click",takeTest);
     document.querySelector("#createT").addEventListener("click",createTest);
-  
+    document.querySelector("#goBack").addEventListener("click", goBackQ);
+    document.querySelector("#goBackT").addEventListener("click", goBackQ);    
+    
+}
+
+function goBackQ(){
+    location.href = "index.html";
 }
 
 function redirect(){
